@@ -30,7 +30,7 @@ async def hello(ctx):
 async def ai(ctx, *, text):
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.post('https://hook.eu1.make.com/f49x72h9q3vjrdut5ve2e5ya2q3jzabr', data={'text': text}) as response:
+            async with session.post('https://hook.eu1.make.com/2k92h7lrc86rjz8xebz4dix15tvekv4r', data={'text': text}) as response:
                 result = await response.text()
         await ctx.send(f"External IP response: {result}")
     except Exception as e:
