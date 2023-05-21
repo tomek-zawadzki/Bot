@@ -26,6 +26,11 @@ async def hello(ctx):
     
 
 
+
+
+
+import aiohttp
+
 @bot.command()
 async def ai(ctx, *, text):
     try:
@@ -35,5 +40,3 @@ async def ai(ctx, *, text):
         await ctx.send(f"External IP response: {result}")
     except Exception as e:
         await ctx.send(f"An error occurred: {e}")    
-
-bot.run(os.environ["DISCORD_TOKEN"])
